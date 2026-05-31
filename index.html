@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Nuralom Mia - Full-stack Web Developer & Laravel Expert</title>
+    <meta name="description" content="Professional portfolio of Md. Nuralom Mia, Full-stack Web Developer & Laravel Expert with 1+ years experience in e-commerce, portfolio, and business website development.">
+    <meta name="keywords" content="Full-stack Developer, Laravel Expert, PHP, MySQL, E-commerce, Portfolio Website, Bangladesh">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #0a192f;
+            --primary-blue: #007bff;
+            --accent-blue: #00d4ff;
+            --light-blue: #ccf2ff;
+            --text-light: #e6f1ff;
+            --text-gray: #8892b0;
+            --card-bg: #112240;
+            --whatsapp-green: #25D366;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-light);
+            background-color: var(--primary-dark);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Header & Navigation */
+        .navbar {
+            background-color: rgba(10, 25, 47, 0.95);
+            padding: 1.2rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+            z-index: 1000;
+        }
+        
+        .navbar-brand {
+            color: var(--accent-blue) !important;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+        
+        .nav-link {
+            color: var(--text-light) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-blue) !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent-blue);
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* WhatsApp Floating Button - Right Side */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: var(--whatsapp-green);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: pulse-whatsapp 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+        }
+        
+        .whatsapp-tooltip {
+            position: absolute;
+            left: -180px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(10, 25, 47, 0.95);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            width: 170px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            text-align: center;
+        }
+        
+        .whatsapp-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -8px;
+            transform: translateY(-50%);
+            border-width: 8px 0 8px 8px;
+            border-style: solid;
+            border-color: transparent transparent transparent rgba(10, 25, 47, 0.95);
+        }
+        
+        .whatsapp-float:hover .whatsapp-tooltip {
+            opacity: 1;
+            visibility: visible;
+            left: -190px;
+        }
+        
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(10, 25, 47, 0.9) 0%, rgba(0, 20, 40, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            z-index: 10;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--accent-blue), var(--primary-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+        
+        .profile-image {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 8px solid rgba(0, 212, 255, 0.2);
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 212, 255, 0.1);
+            z-index: 1;
+        }
+        
+        .float-1 {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .float-2 {
+            width: 120px;
+            height: 120px;
+            bottom: 15%;
+            right: 8%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        
+        .float-3 {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            left: 85%;
+            animation: float 7s ease-in-out infinite 0.5s;
+        }
+        
+        /* Section Common Styles */
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            color: var(--text-light);
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-blue), var(--accent-blue));
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        section {
+            padding: 100px 0;
+        }
+        
+        /* About Section */
+        .about-content {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-left: 5px solid var(--accent-blue);
+        }
+        
+        .experience-counter {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent-blue), var(--primary-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1;
+        }
+        
+        .counter-label {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+        }
+        
+        /* Skills Section */
+        .skill-item {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            height: 100%;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent-blue);
+        }
+        
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-blue);
+        }
+        
+        .skill-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Services Section */
+        .service-card {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-blue), var(--accent-blue));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent-blue);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Portfolio Section */
+        .portfolio-item {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            height: 100%;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .portfolio-img {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-content {
+            padding: 1.5rem;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .contact-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .contact-form-wrapper {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-top: 5px solid var(--accent-blue);
+        }
+        
+        .form-label {
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(100, 255, 218, 0.2);
+            color: var(--text-light);
+            padding: 0.8rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-blue);
+            color: var(--text-light);
+            box-shadow: 0 0 0 0.25rem rgba(0, 212, 255, 0.25);
+        }
+        
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .contact-info {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            height: 100%;
+            border-top: 5px solid var(--accent-blue);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 212, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        
+        /* Form Messages */
+        .alert {
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 1rem;
+            border: none;
+        }
+        
+        .alert-success {
+            background-color: rgba(40, 167, 69, 0.2);
+            color: #75b798;
+            border-left: 4px solid #28a745;
+        }
+        
+        .alert-danger {
+            background-color: rgba(220, 53, 69, 0.2);
+            color: #e6a1a9;
+            border-left: 4px solid #dc3545;
+        }
+        
+        /* Loader */
+        .loader {
+            display: none;
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--accent-blue);
+            animation: spin 1s ease-in-out infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #071121;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(100, 255, 218, 0.1);
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--accent-blue);
+            color: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .profile-image {
+                width: 280px;
+                height: 280px;
+                margin-top: 3rem;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 30px;
+                right: 30px;
+            }
+            
+            .whatsapp-tooltip {
+                left: -160px;
+                width: 150px;
+                font-size: 12px;
+                padding: 8px 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+            
+            .contact-form-wrapper, .contact-info {
+                padding: 2rem;
+            }
+            
+            .whatsapp-float {
+                width: 45px;
+                height: 45px;
+                font-size: 22px;
+                bottom: 25px;
+                right: 25px;
+            }
+            
+            .whatsapp-tooltip {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .profile-image {
+                width: 240px;
+                height: 240px;
+            }
+            
+            .about-content, .contact-form-wrapper, .contact-info {
+                padding: 1.5rem;
+            }
+            
+            .whatsapp-float {
+                width: 60px;
+                height: 60px;
+                font-size: 25px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Floating Button - Right Side -->
+    <a href="https://wa.me/8801302552916" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-tooltip">Chat on WhatsApp<br>01302552916</div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Nuralom Mia</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="floating-element float-1"></div>
+        <div class="floating-element float-2"></div>
+        <div class="floating-element float-3"></div>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">Md. Nuralom Mia</h1>
+                    <h2 class="hero-subtitle">Full-stack Web Developer & Laravel Expert</h2>
+                    <p class="hero-description">
+                        I build exceptional digital experiences that are fast, accessible, visually appealing, and responsive. With over 1 year of experience specializing in Laravel, PHP, and modern web technologies.
+                    </p>
+                    <div class="mt-4">
+                        <a href="#portfolio" class="btn btn-primary btn-lg me-3" style="background: linear-gradient(to right, var(--primary-blue), var(--accent-blue)); border: none; padding: 0.8rem 2rem;">View My Work</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg" style="border-color: var(--accent-blue); color: var(--accent-blue); padding: 0.8rem 2rem;">Contact Me</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="profile.jpeg" alt="Md. Nuralom Mia - Full-stack Web Developer" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="about-content">
+                        <h3 class="mb-4">Passionate Full-stack Developer</h3>
+                        <p class="mb-4">
+                            I'm a dedicated full-stack web developer with over 1 year of professional experience specializing in Laravel, PHP, and modern web technologies. I create robust, scalable web applications with clean code and exceptional user experiences.
+                        </p>
+                        <p class="mb-4">
+                            My expertise includes developing e-commerce platforms, portfolio websites, business websites, and digital marketing agency websites. I'm passionate about solving complex problems and delivering high-quality solutions that exceed client expectations.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <div class="text-center me-5">
+                                <div class="experience-counter">1+</div>
+                                <div class="counter-label">Years Experience</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="experience-counter">15+</div>
+                                <div class="counter-label">Projects Completed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="skill-item">
+                                <i class="fab fa-laravel skill-icon"></i>
+                                <h4 class="skill-name">Laravel Expert</h4>
+                                <p>Building robust backend systems and APIs with Laravel framework.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="skill-item">
+                                <i class="fas fa-shopping-cart skill-icon"></i>
+                                <h4 class="skill-name">E-commerce</h4>
+                                <p>Developing full-featured online stores with secure payment integration.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="skill-item">
+                                <i class="fas fa-mobile-alt skill-icon"></i>
+                                <h4 class="skill-name">Responsive Design</h4>
+                                <p>Creating websites that work perfectly on all devices and screen sizes.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="skill-item">
+                                <i class="fas fa-bullhorn skill-icon"></i>
+                                <h4 class="skill-name">Digital Marketing</h4>
+                                <p>Building websites optimized for digital marketing agencies.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="skill-item">
+                        <i class="fab fa-laravel skill-icon"></i>
+                        <h4 class="skill-name">Laravel</h4>
+                        <p>Expert level with 1+ years of experience</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="skill-item">
+                        <i class="fab fa-php skill-icon"></i>
+                        <h4 class="skill-name">PHP</h4>
+                        <p>Advanced PHP programming skills</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="skill-item">
+                        <i class="fas fa-database skill-icon"></i>
+                        <h4 class="skill-name">MySQL</h4>
+                        <p>Database design & optimization</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="skill-item">
+                        <i class="fas fa-code skill-icon"></i>
+                        <h4 class="skill-name">API Development</h4>
+                        <p>RESTful API design & integration</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="skill-item">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <h4 class="skill-name">HTML5</h4>
+                        <p>Semantic markup & modern HTML</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt skill-icon"></i>
+                        <h4 class="skill-name">CSS3</h4>
+                        <p>Advanced styling & animations</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="skill-item">
+                        <i class="fab fa-bootstrap skill-icon"></i>
+                        <h4 class="skill-name">Bootstrap</h4>
+                        <p>Responsive framework expertise</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="skill-item">
+                        <i class="fab fa-js-square skill-icon"></i>
+                        <h4 class="skill-name">JavaScript</h4>
+                        <p>Interactive & dynamic web features</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-shopping-cart service-icon"></i>
+                        <h4 class="mb-3">E-commerce Website</h4>
+                        <p>Full-featured online stores with product management, shopping cart, secure payment integration, and admin dashboard.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-briefcase service-icon"></i>
+                        <h4 class="mb-3">Portfolio Website</h4>
+                        <p>Creative and professional portfolio websites to showcase your work, skills, and achievements effectively.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-building service-icon"></i>
+                        <h4 class="mb-3">Business Website</h4>
+                        <p>Corporate websites that represent your brand professionally and help grow your business online.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-chart-line service-icon"></i>
+                        <h4 class="mb-3">Digital Marketing Agency Website</h4>
+                        <p>High-performance websites for marketing agencies with lead generation and client management features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">My Portfolio</h2>
+            <div class="row">
+                <!-- Portfolio Item 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="E-commerce Project" class="portfolio-img">
+                        <div class="portfolio-content">
+                            <h4>Laravel E-commerce Store</h4>
+                            <p class="mb-3">A full-featured online store with product catalog, shopping cart, secure payment integration, and admin panel.</p>
+                            <a href="https://asimmart.wuaze.com/" class="btn btn-sm btn-outline-primary">View Live</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Business Website" class="portfolio-img">
+                        <div class="portfolio-content">
+                            <h4>Corporate Business Website</h4>
+                            <p class="mb-3">A professional corporate website with service pages, team management, and contact system built with Laravel.</p>
+                            <a href="https://corporatebussiness.netlify.app/" class="btn btn-sm btn-outline-primary">View Live</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Digital Marketing Website" class="portfolio-img">
+                        <div class="portfolio-content">
+                            <h4>Digital Marketing Agency</h4>
+                            <p class="mb-3">A complete website for a digital marketing agency with portfolio showcase, client management, and lead generation.</p>
+                            <a href="https://nuralom.infinityfreeapp.com/" class="btn btn-sm btn-outline-primary">View Live</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-subtitle">
+                    Have a project in mind or want to discuss potential collaboration? I'd love to hear from you. 
+                    Fill out the form below or reach out directly through any of my contact channels.
+                </p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="contact-form-wrapper">
+                        <h3 class="mb-4" style="color: var(--accent-blue);">Send Me a Message</h3>
+                        
+                        <!-- Form Messages -->
+                        <div id="form-message" class="alert" style="display: none;"></div>
+                        
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Your Name *</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Your Email *</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="What is this regarding?" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Your Message *</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Describe your project or inquiry in detail..." required></textarea>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="loader" id="form-loader"></div>
+                                <button type="submit" id="submit-btn" class="btn btn-primary btn-lg" style="background: linear-gradient(to right, var(--primary-blue), var(--accent-blue)); border: none; padding: 1rem 2.5rem; flex: 1;">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info">
+                        <h3 class="mb-4" style="color: var(--accent-blue);">Contact Information</h3>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5>Email</h5>
+                                <p style="color: var(--text-light);">nmnuralom541@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Phone</h5>
+                                <p style="color: var(--text-light);">01861319819</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h5>WhatsApp</h5>
+                                <p style="color: var(--text-light);">01302552916</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Location</h5>
+                                <p style="color: var(--text-light);">Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5 pt-3">
+                            <h5 class="mb-4">Connect With Me</h5>
+                            <div class="social-icons">
+                                <a href="https://www.linkedin.com/in/nuralom-mia-3a02a42b0/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/asimboss32" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://www.facebook.com/nuralam.shek.98" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://wa.me/8801302552916" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-3">&copy; 2025 Md. Nuralom Mia. All Rights Reserved.</p>
+            <p class="text-muted">Full-stack Web Developer & Laravel Expert</p>
+            <p class="text-muted mt-2">
+                <i class="fab fa-whatsapp me-1"></i> WhatsApp: 01302552916 | 
+                <i class="fas fa-phone me-1 ms-3"></i> Phone: 01861319819
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <script>
+        // Initialize EmailJS
+        (function() {
+            emailjs.init("ssVsn9gTiKX0XorWv"); // Replace with your EmailJS public key
+        })();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.style.backgroundColor = 'rgba(10, 25, 47, 0.98)';
+                navbar.style.padding = '0.8rem 0';
+            } else {
+                navbar.style.backgroundColor = 'rgba(10, 25, 47, 0.95)';
+                navbar.style.padding = '1.2rem 0';
+            }
+        });
+        
+        // Animated counters for stats
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16); // 60fps
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start) + '+';
+                }
+            }, 16);
+        }
+        
+        // Initialize counters when in viewport
+        const observerOptions = {
+            threshold: 0.5
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.experience-counter');
+                    counters.forEach(counter => {
+                        const target = parseInt(counter.textContent);
+                        if (!isNaN(target)) {
+                            counter.textContent = '0+';
+                            animateCounter(counter, target, 1500);
+                        }
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        // Observe the about section for counter animation
+        const aboutSection = document.querySelector('.about-section');
+        if (aboutSection) {
+            observer.observe(aboutSection);
+        }
+        
+        // Add animation to elements on scroll
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 1s ease forwards';
+                    scrollObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        // Observe elements for scroll animations
+        document.querySelectorAll('.skill-item, .service-card, .portfolio-item').forEach(item => {
+            item.style.opacity = '0';
+            scrollObserver.observe(item);
+        });
+        
+        // WhatsApp button visibility on scroll
+        const whatsappBtn = document.querySelector('.whatsapp-float');
+        let lastScrollTop = 0;
+        
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down
+                whatsappBtn.style.bottom = '20px';
+            } else {
+                // Scrolling up
+                whatsappBtn.style.bottom = '40px';
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+        
+        // EmailJS Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form elements
+            const submitBtn = document.getElementById('submit-btn');
+            const loader = document.getElementById('form-loader');
+            const messageDiv = document.getElementById('form-message');
+            
+            // Show loader and disable submit button
+            loader.style.display = 'inline-block';
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...';
+            
+            // Hide previous message
+            messageDiv.style.display = 'none';
+            
+            // Get form values
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                to_email: 'nmnuralom541@gmail.com' // Your email address
+            };
+            
+            // Send email using EmailJS
+            emailjs.send('service_gcp5cuc', 'template_fb55mb8', formData)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Show success message
+                    messageDiv.className = 'alert alert-success';
+                    messageDiv.innerHTML = '<i class="fas fa-check-circle me-2"></i> Your message has been sent successfully! I will get back to you soon.';
+                    messageDiv.style.display = 'block';
+                    
+                    // Reset form
+                    document.getElementById('contactForm').reset();
+                    
+                    // Scroll to message
+                    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    
+                    // Show error message
+                    messageDiv.className = 'alert alert-danger';
+                    messageDiv.innerHTML = '<i class="fas fa-exclamation-circle me-2"></i> Sorry, there was an error sending your message. Please try again or contact me directly via email/WhatsApp.';
+                    messageDiv.style.display = 'block';
+                    
+                    // Scroll to message
+                    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                })
+                .finally(function() {
+                    // Reset button and hide loader
+                    loader.style.display = 'none';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Send Message';
+                });
+        });
+        
+        // Instructions for EmailJS setup
+        console.log(`
+        ==============================================
+        EMAILJS SETUP INSTRUCTIONS:
+        
+        1. Go to https://www.emailjs.com/ and create an account
+        2. Create a new email service (Gmail, Outlook, etc.)
+        3. Create an email template with these variables:
+           - {{name}}
+           - {{email}}
+           - {{subject}}
+           - {{message}}
+        
+        4. Get your:
+           - Public Key (for emailjs.init())
+           - Service ID (for emailjs.send())
+           - Template ID (for emailjs.send())
+        
+        5. Replace in the code:
+           - Line 1017: Replace "YOUR_PUBLIC_KEY_HERE"
+           - Line 1107: Replace "YOUR_SERVICE_ID"
+           - Line 1107: Replace "YOUR_TEMPLATE_ID"
+        
+        ==============================================
+        `);
+    </script>
+</body>
+</html>
